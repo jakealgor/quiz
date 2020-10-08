@@ -8,9 +8,7 @@ const highScore = document.getElementById('highscores')
 const finalScore = document.getElementById('final-score')
 const initials = document.getElementById('initials')
 
-
-
-let count = 2;
+let count = 60;
 let point = 0;
 
 function settimer() {
@@ -80,7 +78,6 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
-    // console.log(correct)
     setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
